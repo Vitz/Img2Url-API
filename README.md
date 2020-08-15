@@ -12,10 +12,10 @@ import requests
 from Img2UrlApi.ImgUploader import ImgUploader
 
 ### init ###
-url = "http://img2url.site" 
-user_key = "GwAwetQ90EnhoorB6wDaV0hjb9o"    
-sec_key = "qqq" 
-img_uploader = ImgUploader(url, user_key, sec_key)  
+url = "http://img2url.site"     
+user_key = "GwAwetQ90EnhoorB6wDaV0hjb9o"        
+sec_key = "qqq"     
+img_uploader = ImgUploader(url, user_key, sec_key)      
 
 ### upload ###
 for i in range(100):     

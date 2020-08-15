@@ -1,28 +1,33 @@
 # Img2Url-API
 
-API for image hosting eg. www.img2url.site
+API for image hosting eg. img2url.site
 
-#Example:
+pip install Img2UrlApi
+
+# Example:
 ###  import ###
-from ImgUploader import ImgUploader
+from PIL import Image
+import requests
+
+from Img2UrlApi.ImgUploader import ImgUploader
 
 ### init ###
-url = "http://www.vitz.usermd.net"  
-user_key = "LXJdKWdqR2UEfaOcgLdAupYlFXY"    
-sec_key = "KMEXnv5PTvmevfIsZbv5Igo7Guc"  
-img_uploader = ImgUploader(url, user_key, sec_key)    
+url = "http://img2url.site" 
+user_key = "GwAwetQ90EnhoorB6wDaV0hjb9o"    
+sec_key = "qqq" 
+img_uploader = ImgUploader(url, user_key, sec_key)  
 
 ### upload ###
-for i in range(100):    
-    print(i)    
+for i in range(100):     
+    print(i)        
     img_uploader.post_image("test.jpg")
 
 ### get ###
-img = img_uploader.get_image(107)   
+img = img_uploader.get_image(107)       
 print(img)
 
 ### get all ###
-imgs = img_uploader.get_images()    
+imgs = img_uploader.get_images()     
 print(imgs)
 
 ### remove ###

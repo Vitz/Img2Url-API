@@ -20,12 +20,10 @@ sec_key = "qqq"
 img_uploader = ImgUploader(url, user_key, sec_key)      
 
 ### upload ###
-id = img_uploader.post_image("test.jpg")
-print(id)
+print(img_uploader.post_image("test.jpg"))
 
 ### get ###
-img = img_uploader.get_image(107)       
-print(img)
+print(img_uploader.get_image(107) )
 
 ### get all ###
 imgs = img_uploader.get_images()     

@@ -1,5 +1,4 @@
 # Img2Url-API
-
 API for image hosting eg. img2url.site
 
 # Install:
@@ -26,8 +25,7 @@ print(img_uploader.post_image("test.jpg"))
 print(img_uploader.get_image(107) )
 
 ### get all ###
-imgs = img_uploader.get_images()     
-print(imgs)
+print(img_uploader.get_images())
 
 ### remove ###
 print(img_uploader.remove_image(109))

@@ -2,7 +2,9 @@
 
 API for image hosting eg. img2url.site
 
+# Install:
 pip install Img2UrlApi
+You need to install also: PILLOW and requests
 
 # Example:
 ###  import ###

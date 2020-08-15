@@ -8,11 +8,10 @@ You need to install also: PILLOW and requests
 
 # Example:
 ###  import ###
-from PIL import Image
+from PIL import Image 
 import requests
 
-from Img2UrlApi.ImgUploader   
-import ImgUploader
+from Img2UrlApi.ImgUploader import ImgUploader
 
 ### init ###
 url = "http://img2url.site"     

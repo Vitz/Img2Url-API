@@ -11,7 +11,8 @@ You need to install also: PILLOW and requests
 from PIL import Image
 import requests
 
-from Img2UrlApi.ImgUploader import ImgUploader
+from Img2UrlApi.ImgUploader   
+import ImgUploader
 
 ### init ###
 url = "http://img2url.site"     

@@ -6,7 +6,6 @@ import io
 
 import requests
 
-
 class ImgUploader:
     # urls
     POST_IMG = "/api/images"  # as base64
@@ -25,7 +24,7 @@ class ImgUploader:
             url = self.url + self.GET_IMG + "/" + str(id)
             headers = {"userkey": self.user_key, "seckey": self.sec_key}
             x = requests.get(url, headers=headers)
-            return x.text
+            return json.loads(x.text)
         except Exception as e:
             print("cant get image")
             print(e)
@@ -37,9 +36,8 @@ class ImgUploader:
             bytes = self.__load_image_from_file(filepath)
             string = bytes.decode('utf-8')
             data = {"img_base64": "data:image/png;base64," + string}
-            print(data)
             x = requests.post(url, data=data, headers=headers)
-            print(x.text)
+            return json.loads(x.text)
         except Exception as e:
             print("cant add image")
             print(e)
@@ -49,7 +47,7 @@ class ImgUploader:
             url = self.url + self.GET_ALL_IMG
             headers = {"userkey": self.user_key, "seckey": self.sec_key}
             x = requests.get(url, headers=headers)
-            return x.text
+            return json.loads(x.text)
         except Exception as e:
             print("cant get image")
             print(e)
@@ -59,7 +57,7 @@ class ImgUploader:
             url = self.url + self.DEL_IMG + "/" + str(id)
             headers = {"userkey": self.user_key, "seckey": self.sec_key}
             x = requests.delete(url, headers=headers)
-            return x.text
+            return json.loads(x.text)
         except Exception as e:
             print("cant remove image")
             print(e)
@@ -73,11 +71,12 @@ class ImgUploader:
             photos_obj = json.loads(x.text)["images"]
             for photo in photos_obj:
                 self.remove_image(photo["id"])
-                i.append(photo["id"])
+                i.append(photo)
             return i
         except Exception as e:
             print("cant get and remove all images")
             print(e)
+
 
     def __load_image_from_file(self, filepath):
         with open(filepath, "rb") as imageFile:

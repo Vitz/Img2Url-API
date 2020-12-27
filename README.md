@@ -1,5 +1,10 @@
 # Img2Url-API
-API for image hosting eg. img2url.site
+API for image hosting eg. www.img2url.site
+Its free, just register to get a  api key. 
+Just remember it's an aplication to change your image into url link.  Don't use it as a permanent hosting. There is no any guarantee images will be stored.
+
+I have made the app because I needed to change many images from disk into csv file (Woocomerce products) to upload products from csv files.  
+
 
 # Install:
 pip install Img2UrlApi  
